@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicoHood - Connect With Your Neighborhood</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .join-btn {
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .join-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }   
+        }
+
+        .neon-text {
+            text-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .app-store-btn {
+            transition: all 0.3s ease;
+            background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+        }
+
+        .app-store-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 scroll-smooth">
+
+    <!-- Animated Header with Logo -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                    <i class="fas fa-people-group text-white text-xs"></i>
+                </div>
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">MicoHood</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#features" class="text-gray-600 hover:text-blue-500 transition-colors">Features</a></li>
+                    <li><a href="#join" class="text-gray-600 hover:text-blue-500 transition-colors">Join</a></li>
+                    <li><a href="#demo" class="px-4 py-2 bg-gradient-to-r from-blue-400 to-indigo-500 text-white rounded-full transition-all hover:shadow-lg">Demo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Floating Elements -->
+    <section class="gradient-bg text-white pt-32 pb-24 px-4">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mb-12 lg:mb-0 relative">
+                <div class="max-w-lg">
+                    <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-4 neon-text">Connect With Your <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-400">Neighborhood</span></h2>
+                    <p class="text-xl mb-8 opacity-90">Join thousands of neighbors who are making their communities safer, friendlier, and more connected through MicoHood.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#join" class="join-btn text-white font-semibold py-3 px-8 rounded-full text-center">Get Started Free</a>
+                        <a href="#demo" class="border-2 border-white/40 text-white font-semibold py-3 px-8 rounded-full transition-all hover:bg-white/10 text-center">Watch Demo <i class="fas fa-play-circle ml-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="absolute -left-10 -bottom-20 w-24 h-24 rounded-full bg-white/10 hidden lg:block"></div>
+                <div class="absolute right-20 top-20 w-16 h-16 rounded-full bg-white/10 hidden lg:block"></div>
+            </div>
+
+            <div class="lg:w-1/2 relative">
+                <div class="relative max-w-md mx-auto floating">
+                    <img src="https://illustrations.popsy.co/amber/digital-nomad.svg" alt="Neighborhood illustration" class="w-full h-auto">
+                </div>
+
+                <div class="hidden lg:block">
+                    <div class="absolute -top-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                    <div class="absolute top-1/2 -right-20 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto mt-16">
+            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 max-w-4xl mx-auto">
+                <div class="flex flex-wrap justify-center items-center gap-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                        <span class="font-medium">50,000+ active users</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                        <span class="font-medium">2,000+ neighborhoods</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                        <span class="font-medium">24/7 customer support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section with Animated Cards -->
+    <section id="features" class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-4">Features</span>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Everything You Need in One Place</h3>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">MicoHood brings your neighborhood together with powerful features designed to connect communities.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-8 shadow-lg relative overflow-hidden group">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-100 rounded-full opacity-10 group-hover:opacity-20 transition-opacity"></div>
+                    <div class="mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center text-blue-600 text-xl mb-4">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Local Updates</h4>
+                        <p class="text-gray-600">Get real-time notifications about neighborhood events, alerts, and important announcements.</p>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium">Instant Alerts</span>
+                        <span class="inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium">Event Calendar</span>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-8 shadow-lg relative overflow-hidden group">
+                    <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-green-100 rounded-full opacity-10 group-hover:opacity-20 transition-opacity"></div>
+                    <div class="mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center text-green-600 text-xl mb-4">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Business Directory</h4>
+                        <p class="text-gray-600">Discover and support local businesses with detailed listings, reviews, and special offers.</p>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="inline-block bg-green-50 text-green-600 px-3 py-1 rounded-full text-xs font-medium">Local Deals</span>
+                        <span class="inline-block bg-green-50 text-green-600 px-3 py-1 rounded-full text-xs font-medium">Verified Reviews</span>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-8 shadow-lg relative overflow-hidden group">
+                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-purple-100 rounded-full opacity-10 group-hover:opacity-20 transition-opacity"></div>
+                    <div class="mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center text-purple-600 text-xl mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Safety Network</h4>
+                        <p class="text-gray-600">Community-driven safety alerts, neighborhood watch coordination, and emergency resources.</p>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="inline-block bg-purple-50 text-purple-600 px-3 py-1 rounded-full text-xs font-medium">Alert System</span>
+                        <span class="inline-block bg-purple-50 text-purple-600 px-3 py-1 rounded-full text-xs font-medium">24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section with Animated Form -->
+    <section id="join" class="py-20 px-4 gradient-bg">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Join Your Community?</h3>
+                <p class="text-xl text-white/90 max-w-2xl mx-auto">Sign up now to connect with your neighbors and discover everything your neighborhood has to offer.</p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm p-8 sm:p-10 rounded-2xl border border-white/20">
+                <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-white font-medium mb-2">Your Name</label>
+                            <div class="relative">
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 focus:border-white/50 focus:outline-none text-white placeholder-white/70" placeholder="John Doe" required>
+                                <div class="absolute right-3 top-3 text-white/70">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-white font-medium mb-2">Email Address</label>
+                            <div class="relative">
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 focus:border-white/50 focus:outline-none text-white placeholder-white/70" placeholder="you@example.com" required>
+                                <div class="absolute right-3 top-3 text-white/70">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="neighborhood" class="block text-white font-medium mb-2">Your Neighborhood</label>
+                        <div class="relative">
+                            <input type="text" id="neighborhood" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 focus:border-white/50 focus:outline-none text-white placeholder-white/70" placeholder="Enter your neighborhood name" required>
+                            <div class="absolute right-3 top-3 text-white/70">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full join-btn text-white font-semibold py-3 px-8 rounded-full mt-6 flex items-center justify-center">
+                            <span>Join MicoHood</span>
+                            <i class="fas fa-arrow-right ml-3"></i>
+                        </button>
+                    </div>
+
+                    <p class="text-white/70 text-center text-sm">
+                        By joining, you agree to our <a href="#" class="text-white underline hover:text-yellow-300 transition-colors">Terms of Service</a> and <a href="#" class="text-white underline hover:text-yellow-300 transition-colors">Privacy Policy</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="demo" class="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6">Available on Mobile Too!</h3>
+            <p class="text-xl text-gray-600 mb-8">Download the MicoHood app for iOS and Android to stay connected on the go.</p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="#" class="app-store-btn inline-flex items-center justify-center px-6 py-3 rounded-xl text-white shadow-lg">
+                    <i class="fab fa-apple text-2xl mr-3"></i>
+                    <div class="text-left">
+                        <div class="text-xs opacity-80">Download on the</div>
+                        <div class="text-lg font-semibold">App Store</div>
+                    </div>
+                </a>
+                <a href="#" class="app-store-btn inline-flex items-center justify-center px-6 py-3 rounded-xl text-white shadow-lg">
+                    <i class="fab fa-google-play text-2xl mr-3"></i>
+                    <div class="text-left">
+                        <div class="text-xs opacity-80">Get it on</div>
+                        <div class="text-lg font-semibold">Google Play</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Demo Video Placeholder -->
+            <div class="bg-gray-100 rounded-2xl p-8 max-w-2xl mx-auto">
+                <div class="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl p-12 text-white relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="relative z-10 text-center">
+                        <i class="fas fa-play-circle text-6xl mb-4 opacity-90"></i>
+                        <h4 class="text-2xl font-bold mb-2">Watch MicoHood in Action</h4>
+                        <p class="opacity-90 mb-6">See how easy it is to connect with your neighborhood</p>
+                        <button class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full hover:bg-white/30 transition-all">
+                            Play Demo Video <i class="fas fa-play ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                            <i class="fas fa-people-group text-white text-xs"></i>
+                        </div>
+                        <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">MicoHood</h1>
+                    </div>
+                    <p class="text-gray-400 text-sm">Connecting neighborhoods, building communities, one connection at a time.</p>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Product</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mobile App</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Company</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Support</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Community Guidelines</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 MicoHood. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const neighborhood = document.getElementById('neighborhood').value;
+            
+            // Simple form validation
+            if (name && email && neighborhood) {
+                alert(`Welcome to MicoHood, ${name}! We'll send you neighborhood updates for ${neighborhood} at ${email}.`);
+                // Reset form
+                event.target.reset();
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe feature cards
+            document.querySelectorAll('.feature-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
